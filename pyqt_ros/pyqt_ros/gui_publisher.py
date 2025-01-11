@@ -48,7 +48,7 @@ class PublisherGUI(QWidget):
         hello_btn.clicked.connect(self.publish_hello)
         goodbye_btn.clicked.connect(self.publish_goodbye)
         
-        # 버튼을 레이아웃에 추가
+        # 레이아웃에 버튼 추가
         layout.addWidget(hello_btn)
         layout.addWidget(goodbye_btn)
         self.setLayout(layout)

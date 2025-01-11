@@ -50,7 +50,7 @@ class SubscriberGUI(QWidget):
         self.label.setAlignment(Qt.AlignCenter)
         self.label.setStyleSheet('font-size: 30px; color: blue;')
         
-        # 라벨을 레이아웃에 추가
+        # 레이아웃에 라벨 추가
         layout.addWidget(self.label)
         self.setLayout(layout)
 

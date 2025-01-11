@@ -5,7 +5,7 @@
 | 기간 | 내용 | 폴더 |
 | --- | --- | --- |
 | 2025.01.10 | ros2 documentation 참고([https://docs.ros.org/en/humble/Tutorials/Beginner-Client-Libraries.html](https://docs.ros.org/en/humble/Tutorials/Beginner-Client-Libraries.html)) ; 기본 topic, service, interface(custom) 패키지 생성/테스트 | py_pubsub, py_srvcli, tutorial_interfaces |
-| 2025.01.11 | ros2, PyQt5(GUI) 연동 ; 버튼에 통신 연결 | pyqt_ros |
+| 2025.01.11 | ros2, PyQt5(GUI) 연동 ; 버튼에 topic 통신 연결 | pyqt_ros |
 
 ### 기술 스택
 
@@ -81,4 +81,20 @@
     $ ros2 run pyqt_ros subscriber
     [INFO] [1736587392.675690656] [gui_subscriber_node]: Received: "Hello"
     [INFO] [1736587394.667881090] [gui_subscriber_node]: Received: "Goodbye"
+    ```
+    
+    ![img4](https://github.com/user-attachments/assets/1014e971-ffe4-42bb-bd14-60765f4cd647)
+    
+    ```python
+    $ ros2 run pyqt_ros stop_publisher 
+    [INFO] [1736601277.020722894] [gui_stop_publisher]: Started publishing...
+    [INFO] [1736601278.066126437] [gui_stop_publisher]: Publishing message #0
+    [INFO] [1736601279.071913560] [gui_stop_publisher]: Publishing message #1
+    [INFO] [1736601280.072501715] [gui_stop_publisher]: Publishing message #2
+    [INFO] [1736601280.523379824] [gui_stop_publisher]: Stopped publishing.
+    
+    $ ros2 run pyqt_ros subscriber
+    [INFO] [1736601278.075910586] [gui_subscriber_node]: Received: "#0"
+    [INFO] [1736601279.167644627] [gui_subscriber_node]: Received: "#1"
+    [INFO] [1736601280.167838907] [gui_subscriber_node]: Received: "#2"
     ```
