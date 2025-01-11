@@ -21,6 +21,7 @@ setup(
     entry_points={
         'console_scripts': [
             'publisher = pyqt_ros.gui_publisher:main',
+            'subscriber = pyqt_ros.gui_subscriber:main',
             'stop_publisher = pyqt_ros.gui_stop_publisher:main',
         ],
     },

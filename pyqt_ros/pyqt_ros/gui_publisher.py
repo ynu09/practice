@@ -1,57 +1,74 @@
 import sys
 from PyQt5.QtWidgets import QApplication, QWidget, QVBoxLayout, QPushButton
+
 import rclpy
 from rclpy.node import Node
 from std_msgs.msg import String
 
-class GuiPublisherNode(Node):
+class PublisherNode(Node):
     def __init__(self):
-        super().__init__('gui_publisher')
-        self.publisher_ = self.create_publisher(String, 'button_topic', 10)
+        super().__init__('gui_publisher_node')
 
-    # 터미널에 출력(Published: Hello, Published: Goodbye)
-    def publish_message(self, msg):
-        message = String()
-        message.data = msg
-        self.publisher_.publish(message)
-        self.get_logger().info(f"Published: {msg}")
+        # [Topic Publisher] 메시지 송신
+        self.publisher_ = self.create_publisher(
+            String, 
+            'button_topic', 
+            10)
 
-class MainWindow(QWidget):
-    def __init__(self, ros_node):
+    # [Topic 콜백함수]
+    def publish_message(self, text):
+        msg = String()
+        msg.data = text
+        self.publisher_.publish(msg)
+
+        # 터미널 출력(Publishing: Hello, Publishing: Goodbye)
+        self.get_logger().info(f'Publishing: "{text}"')
+
+class PublisherGUI(QWidget):
+    def __init__(self, publisher_node):
         super().__init__()
-        self.ros_node = ros_node
-
+        self.publisher_node = publisher_node
+        self.initUI()
+    
+    def initUI(self):
         # GUI 레이아웃 설정
-        self.setWindowTitle("ROS2 PyQt Button")
+        self.setWindowTitle('Message Publish Application')
+        # 창 시작 위치
+        self.move(400, 250)
+        # 창 width, height
         self.resize(350, 100)
+
+        # 레이아웃 설정
         layout = QVBoxLayout()
 
-        # 버튼 생성
-        self.button1 = QPushButton("Publish 'Hello'")
-        self.button1.clicked.connect(self.publish_hello)
-        layout.addWidget(self.button1)
+        # 버튼 생성 & 이벤트 연결
+        hello_btn = QPushButton('Publish "Hello"')
+        goodbye_btn = QPushButton('Publish "Goodbye"')
 
-        self.button2 = QPushButton("Publish 'Goodbye'")
-        self.button2.clicked.connect(self.publish_goodbye)
-        layout.addWidget(self.button2)
-
+        hello_btn.clicked.connect(self.publish_hello)
+        goodbye_btn.clicked.connect(self.publish_goodbye)
+        
+        # 버튼을 레이아웃에 추가
+        layout.addWidget(hello_btn)
+        layout.addWidget(goodbye_btn)
         self.setLayout(layout)
 
+    # publish 할 메시지
     def publish_hello(self):
-        self.ros_node.publish_message("Hello")
+        self.publisher_node.publish_message('Hello')
 
     def publish_goodbye(self):
-        self.ros_node.publish_message("Goodbye")
+        self.publisher_node.publish_message('Goodbye')
 
 def main():
     rclpy.init()
-    ros_node = GuiPublisherNode()
+    publisher_node = PublisherNode()
 
     app = QApplication(sys.argv)
-    window = MainWindow(ros_node)
+    window = PublisherGUI(publisher_node)
     window.show()
-
     sys.exit(app.exec_())
+
     rclpy.shutdown()
 
 if __name__ == '__main__':

@@ -13,6 +13,7 @@ class MinimalClientAsync(Node):
         self.cli = self.create_client(AddTwoInts, 'add_two_ints')
 
         # 1초에 한 번씩 클라이언트의 유형/이름과 일치하는 서비스를 사용할 수 있는지 확인
+        # 즉, 서비스가 준비됐는지 확인
         while not self.cli.wait_for_service(timeout_sec=1.0):
             self.get_logger().info('service not available, waiting again...')
         

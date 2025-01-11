@@ -24,12 +24,12 @@
     1. py_pubsub
         
         ```python
-        ynu@ynu-rokey:~/ynu_git/base_ws$ ros2 run py_pubsub talker
+        $ ros2 run py_pubsub talker
         [INFO] [1736512562.183009175] [minimal_publisher]: Publishing: "Hello World: 0"
         [INFO] [1736512562.675734458] [minimal_publisher]: Publishing: "Hello World: 1"
         [INFO] [1736512563.175990206] [minimal_publisher]: Publishing: "Hello World: 2"
         
-        ynu@ynu-rokey:~/ynu_git/base_ws$ ros2 run py_pubsub listener
+        $ ros2 run py_pubsub listener
         [INFO] [1736512562.176433920] [minimal_subscriber]: I heard: "Hello World: 0"
         [INFO] [1736512562.675941791] [minimal_subscriber]: I heard: "Hello World: 1"
         [INFO] [1736512563.176384981] [minimal_subscriber]: I heard: "Hello World: 2"
@@ -38,28 +38,28 @@
     2. py_srvcli 
         
         ```python
-        ynu@ynu-rokey:~/ynu_git/base_ws$ ros2 run py_srvcli service
+        $ ros2 run py_srvcli service
         [INFO] [1736515209.738682086] [minimal_service]: Incoming request
         a: 2 b: 3
         
-        ynu@ynu-rokey:~/ynu_git/base_ws$ ros2 run py_srvcli client 2 3
+        $ ros2 run py_srvcli client 2 3
         [INFO] [1736515209.745435349] [minimal_client_async]: Result of add_two_ints: for 2 + 3 = 5
         ```
         
     3. tutorial_interfaces
         
         ```python
-        ynu@ynu-rokey:~/ynu_git/base_ws$ ros2 interface show tutorial_interfaces/msg/Num
+        $ ros2 interface show tutorial_interfaces/msg/Num
         int64 num
         
-        ynu@ynu-rokey:~/ynu_git/base_ws$ ros2 interface show tutorial_interfaces/msg/Sphere 
+        $ ros2 interface show tutorial_interfaces/msg/Sphere 
         geometry_msgs/Point center
         	float64 x
         	float64 y
         	float64 z
         float64 radius
         
-        ynu@ynu-rokey:~/ynu_git/base_ws$ ros2 interface show tutorial_interfaces/srv/AddThreeInts
+        $ ros2 interface show tutorial_interfaces/srv/AddThreeInts
         int64 a
         int64 b
         int64 c
@@ -68,3 +68,20 @@
         ```
         
 - 2025.01.11
+    
+    
+    https://github.com/user-attachments/assets/ceea541c-1f16-4b6f-85ec-f230fd2a2912
+    
+    https://github.com/user-attachments/assets/183190be-e54f-4b07-88aa-c40a892ed0a1
+    
+    https://github.com/user-attachments/assets/da134a2d-bfe1-47b0-bafd-3ac015518fda
+
+    ```python
+    $ ros2 run pyqt_ros publisher 
+    [INFO] [1736587392.626025886] [gui_publisher_node]: Publishing: "Hello"
+    [INFO] [1736587394.616446083] [gui_publisher_node]: Publishing: "Goodbye"
+    
+    $ ros2 run pyqt_ros subscriber
+    [INFO] [1736587392.675690656] [gui_subscriber_node]: Received: "Hello"
+    [INFO] [1736587394.667881090] [gui_subscriber_node]: Received: "Goodbye"
+    ```
