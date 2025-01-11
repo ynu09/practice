@@ -12,15 +12,17 @@ for i in range(1, 4):
 
 while cap.isOpened():
     # 비디오 프레임 읽기
+    # print(cap.read()) # (True/False, frame)
     success, frame = cap.read()
     
     if success:
-        # 프레임에 YOLOv8 추적 실행
+        # 프레임에 YOLOv8 객체 추적 실행
         results = model.track(frame, persist=True)
         
-        # 결과 프레임에 시각화
+        # 프레임에 결과 시각화
         annotated_frame = results[0].plot()
         
+        # annotated frame 표시
         cv2.imshow('YOLOv8 Tracking', annotated_frame)
         
         # q키 눌러서 종료

@@ -5,7 +5,7 @@
 | 기간 | 내용 | 폴더 |
 | --- | --- | --- |
 | 2025.01.10 | ros2 documentation 참고([https://docs.ros.org/en/humble/Tutorials/Beginner-Client-Libraries.html](https://docs.ros.org/en/humble/Tutorials/Beginner-Client-Libraries.html)) ; 기본 topic, service, interface(custom) 패키지 생성/테스트 | py_pubsub, py_srvcli, tutorial_interfaces |
-| 2025.01.11 | ros2, PyQt5(GUI) 연동 ; 버튼에 topic 통신 연결 / YOLO object tracking (OpenCV) | pyqt_ros, yolo_cv |
+| 2025.01.11 | ros2, PyQt5(GUI) 연동 ; 버튼에 topic 통신 연결 / YOLO object detection, tracking (OpenCV) & 추적 라인 그리기 | pyqt_ros, yolo_cv |
 
 ### 기술 스택
 
@@ -101,6 +101,14 @@
         ```
         
     2. yolo_cv
-        
-        object_tracking (yolov8n.pt 사용)
-        ![img5](https://github.com/user-attachments/assets/e099d8c1-0a47-432c-a702-5805af649cc8)
+        1. object_detection (yolo11n.pt 사용)
+            
+            ![img5](https://github.com/user-attachments/assets/30246ac4-f082-435c-a0f5-6e4254995f66)
+            
+        2. object_tracking (yolov8n.pt 사용)
+            
+            ![img6](https://github.com/user-attachments/assets/27c1afeb-6659-4cc9-b8d6-4d290ecccb36)
+                
+        3. draw_tracking (추적 라인 그리기)
+            
+            ![img7](https://github.com/user-attachments/assets/4f81dbc3-9cc4-4021-a3eb-51443a673544)
