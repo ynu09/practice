@@ -4,8 +4,8 @@
 
 | 기간 | 내용 | 폴더 |
 | --- | --- | --- |
-| 2025.01.10 | ros2 documentation 참고([https://docs.ros.org/en/humble/Tutorials/Beginner-Client-Libraries.html](https://docs.ros.org/en/humble/Tutorials/Beginner-Client-Libraries.html)) ; 기본 topic, service, interface(custom) 패키지 생성/테스트 | base_ws/src/py_pubsub, base_ws/src/py_srvcli, base_ws/src/tutorial_interfaces |
-| 2025.01.11 | ros2, PyQt5(GUI) 연동 ; 버튼에 통신 연결 | base_ws/src/pyqt_ros |
+| 2025.01.10 | ros2 documentation 참고([https://docs.ros.org/en/humble/Tutorials/Beginner-Client-Libraries.html](https://docs.ros.org/en/humble/Tutorials/Beginner-Client-Libraries.html)) ; 기본 topic, service, interface(custom) 패키지 생성/테스트 | py_pubsub, py_srvcli, tutorial_interfaces |
+| 2025.01.11 | ros2, PyQt5(GUI) 연동 ; 버튼에 통신 연결 | pyqt_ros |
 
 ### 기술 스택
 
