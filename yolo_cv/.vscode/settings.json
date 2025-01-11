@@ -1,0 +1,26 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/home/ynu/base_ws/build/py_srvcli",
+        "/home/ynu/base_ws/install/py_srvcli/lib/python3.10/site-packages",
+        "/home/ynu/base_ws/build/py_pubsub",
+        "/home/ynu/base_ws/install/py_pubsub/lib/python3.10/site-packages",
+        "/home/ynu/base_ws/install/tutorial_interfaces/local/lib/python3.10/dist-packages",
+        "/home/ynu/base_ws/build/pyqt_ros",
+        "/home/ynu/base_ws/install/pyqt_ros/lib/python3.10/site-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages",
+        "/home/ynu/ros2_ws/install/common2/lib/common2/imp"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/ynu/base_ws/build/py_srvcli",
+        "/home/ynu/base_ws/install/py_srvcli/lib/python3.10/site-packages",
+        "/home/ynu/base_ws/build/py_pubsub",
+        "/home/ynu/base_ws/install/py_pubsub/lib/python3.10/site-packages",
+        "/home/ynu/base_ws/install/tutorial_interfaces/local/lib/python3.10/dist-packages",
+        "/home/ynu/base_ws/build/pyqt_ros",
+        "/home/ynu/base_ws/install/pyqt_ros/lib/python3.10/site-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages",
+        "/home/ynu/ros2_ws/install/common2/lib/common2/imp"
+    ]
+}
