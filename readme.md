@@ -68,13 +68,9 @@
         ```
         
 - 2025.01.11
-    
-    
-    https://github.com/user-attachments/assets/ceea541c-1f16-4b6f-85ec-f230fd2a2912
-    
-    https://github.com/user-attachments/assets/183190be-e54f-4b07-88aa-c40a892ed0a1
-    
-    https://github.com/user-attachments/assets/da134a2d-bfe1-47b0-bafd-3ac015518fda
+    ![img1](https://github.com/user-attachments/assets/1084f39f-b1e2-49f1-ad2c-78b3bd69525d)
+    ![img2](https://github.com/user-attachments/assets/9c8a1455-c2c3-44b5-85ff-a6bb54f73936)
+    ![img3](https://github.com/user-attachments/assets/f91b012c-ea4d-4ed9-ad80-fe03e57eb29c)
 
     ```python
     $ ros2 run pyqt_ros publisher 
