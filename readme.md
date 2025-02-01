@@ -6,7 +6,7 @@
 | --- | --- | --- |
 | 2025.01.10 | ros2 documentation 참고([https://docs.ros.org/en/humble/Tutorials/Beginner-Client-Libraries.html](https://docs.ros.org/en/humble/Tutorials/Beginner-Client-Libraries.html)) ; Python으로 기본 topic, service, interface(custom) 패키지 생성/테스트 | py_pubsub, py_srvcli, tutorial_interfaces |
 | 2025.01.11 | ros2, PyQt5(GUI) 연동 ; 버튼에 topic 통신 연결 / YOLO object detection, tracking (OpenCV) & 추적 라인 그리기 | pyqt_ros, yolo_cv |
-| 2025.02.01 | ros2 documentation 참고 ; C++로 기본 topic 패키지 생성/테스트 | cpp_pubsub |
+| 2025.02.01 | C++ 기초 공부([https://www.youtube.com/playlist?list=PLgqG2uj21HgkcfVtlr5rPekQl5VWJEnIB](https://www.youtube.com/playlist?list=PLgqG2uj21HgkcfVtlr5rPekQl5VWJEnIB)) / ros2 documentation 참고 ; C++로 기본 topic 패키지 생성/테스트 | cpp_study, cpp_pubsub |
 
 ### 기술 스택
 
