@@ -4,15 +4,16 @@
 
 | 기간 | 내용 | 폴더 |
 | --- | --- | --- |
-| 2025.01.10 | ros2 documentation 참고([https://docs.ros.org/en/humble/Tutorials/Beginner-Client-Libraries.html](https://docs.ros.org/en/humble/Tutorials/Beginner-Client-Libraries.html)) ; 기본 topic, service, interface(custom) 패키지 생성/테스트 | py_pubsub, py_srvcli, tutorial_interfaces |
+| 2025.01.10 | ros2 documentation 참고([https://docs.ros.org/en/humble/Tutorials/Beginner-Client-Libraries.html](https://docs.ros.org/en/humble/Tutorials/Beginner-Client-Libraries.html)) ; Python으로 기본 topic, service, interface(custom) 패키지 생성/테스트 | py_pubsub, py_srvcli, tutorial_interfaces |
 | 2025.01.11 | ros2, PyQt5(GUI) 연동 ; 버튼에 topic 통신 연결 / YOLO object detection, tracking (OpenCV) & 추적 라인 그리기 | pyqt_ros, yolo_cv |
+| 2025.02.01 | ros2 documentation 참고 ; C++로 기본 topic 패키지 생성/테스트 | cpp_pubsub |
 
 ### 기술 스택
 
 | 분류 | 기술 |
 | --- | --- |
 | 개발 환경 | Ubuntu 22.04 |
-| 개발 언어 | Python |
+| 개발 언어 | Python, C++ |
 | 딥러닝 프레임워크 | Ultralytics YOLOv8 |
 | 통신 프로토콜 | ROS2 |
 | UI | PyQt5 |
@@ -112,3 +113,5 @@
         3. draw_tracking (추적 라인 그리기)
             
             ![img7](https://github.com/user-attachments/assets/4f81dbc3-9cc4-4021-a3eb-51443a673544)
+
+- 2025.02.01
