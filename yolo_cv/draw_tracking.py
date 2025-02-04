@@ -7,11 +7,14 @@ import numpy as np
 model = YOLO('yolov8n.pt')
 
 # 카메라 디바이스 확인: ls /dev/video*
-# cap = cv2.VideoCapture(0) # 0 for default camera
-for i in range(1, 4):
-    cap = cv2.VideoCapture(i) # usb cam
-    if cap.isOpened():
-        break
+cap = cv2.VideoCapture(0) # 0 for default camera
+# wsl 사용 시 추가설정
+cap.set(cv2.CAP_PROP_FOURCC, cv2.VideoWriter_fourcc('M', 'J', 'P', 'G'))
+
+# for i in range(1, 4):
+#     cap = cv2.VideoCapture(i) # usb cam
+#     if cap.isOpened():
+#         break
 
 # 추적 내역 저장
 track_history = defaultdict(lambda: [])

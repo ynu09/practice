@@ -3,10 +3,14 @@ from ultralytics import YOLO
 
 model = YOLO("yolo11n.pt")
 
-for i in range(1, 4):
-    cap = cv2.VideoCapture(i) # usb cam
-    if cap.isOpened():
-        break
+cap = cv2.VideoCapture(0) # webcam
+# wsl 사용 시 추가설정
+cap.set(cv2.CAP_PROP_FOURCC, cv2.VideoWriter_fourcc('M', 'J', 'P', 'G'))
+
+# for i in range(0, 4):
+#     cap = cv2.VideoCapture(i) # usb cam 2
+#     if cap.isOpened():
+#         break
 
 while cap.isOpened():
     success, frame = cap.read()
