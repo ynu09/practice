@@ -9,7 +9,7 @@ using namespace std;
 - 메모리 효율 고려하여 사용
 */
 int main() {
-    // 4가지의 데이터형 (각 자료형이 저장할 수 있는 최대 크기)
+    // 4가지의 데이터형 (각 자료형이 저장할 수 있는 최대 크기) ; climits 라이브러리
     short n_short = SHRT_MAX;
     int n_int = INT_MAX;
     long n_long = LONG_MAX;
